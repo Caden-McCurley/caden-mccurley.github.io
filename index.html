@@ -13,7 +13,7 @@
     </header>
     <h2>About Me:</h2>
     <ul>
-        <li>Age: 19</li>
+        <li id="ageListElement"></li>
         <li>Location: Washington, U.S.</li>
         <li>Education: College (Junior) at University of Washington (Tacoma)</li>
         <li>Major: Computer Science & Systems</li>
@@ -38,4 +38,8 @@
       <a class="contact-img" href="https://github.com/caden-mccurley"><img src="images/github.svg" alt="Github Icon"></a>
     </div>
     </body>
+    <script>
+        const getAge = dob => new Date(new Date() - new Date(dob)).getFullYear() - 1970;
+        document.getElementById("ageListElement").textContent = `Age: ${getAge("2006-03-06")}`;
+    </script>
 </html>
